@@ -10,3 +10,8 @@ docker service ls
 docker service ps NGINX
 docker service scale NGINX=2
 
+docker service udate --image kandepi143/nginx:2.0 NGINX
+docker service update --replicas=3 NGINX
+docker service update --rollback NGINX
+docker service update --update-failure-action=rollback NGINX
+
