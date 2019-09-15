@@ -3,3 +3,10 @@ docker swarm join-token worker
 docker node ls
 docker swarm promote <worker_ip>
 docker swarm demote <worker_ip>
+
+
+docker service create --name NGINX kandepi143/nginx:1.0
+docker service ls
+docker service ps NGINX
+docker service scale NGINX=2
+
